@@ -112,6 +112,6 @@ produtos.nome_produto
 from usuarios
 inner join pedidos on usuarios.id_usuario = pedidos.id_usuario
 inner join produtos on pedidos.id_produto = produtos.id_produto	
-where pedidos.id_pedido or pedidos.id_usuario or pedidos.id_produto or pedidos.quantidade or 
+where pedidos.id_pedido is null or pedidos.id_usuario is null or pedidos.id_produto is null or pedidos.quantidade is null or 
 pedidos.data_compra is null;
 
